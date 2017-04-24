@@ -4,83 +4,43 @@
 <meta charset="utf-8">
 <meta name="viewport"></meta>
 <title>Personas LGBT asesinadas en 2015 - Google Fusion Tables</title>
-<style type="text/css">
-html, body, #googft-mapCanvas {
-  height: 480px;
-  margin: 0;
-  padding: 0;
-  width: 640px;
-}
-</style>
 
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3"></script>
-
-<script type="text/javascript">
-  function initialize() {
-    google.maps.visualRefresh = true;
-    var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
-      (navigator.userAgent.match(/(iPod|iPhone|iPad|BlackBerry|Windows Phone|iemobile)/));
-    if (isMobile) {
-      var viewport = document.querySelector("meta[name=viewport]");
-      viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
-    }
-    var mapDiv = document.getElementById('googft-mapCanvas');
-    mapDiv.style.width = isMobile ? '100%' : '640px';
-    mapDiv.style.height = isMobile ? '100%' : '480px';
-    var map = new google.maps.Map(mapDiv, {
-      center: new google.maps.LatLng(5.392748330091345, -71.02150023437503),
-      zoom: 6,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
-    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
-    map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
-
-    layer = new google.maps.FusionTablesLayer({
-      map: map,
-      heatmap: { enabled: false },
-      query: {
-        select: "col3\x3e\x3e0",
-        from: "1WbQ45KSQmJblwUEcDYeuyrQzYNwX5sHHaya4dUH6",
-        where: ""
-      },
-      options: {
-        styleId: 2,
-        templateId: 2
-      }
-    });
-
-    if (isMobile) {
-      var legend = document.getElementById('googft-legend');
-      var legendOpenButton = document.getElementById('googft-legend-open');
-      var legendCloseButton = document.getElementById('googft-legend-close');
-      legend.style.display = 'none';
-      legendOpenButton.style.display = 'block';
-      legendCloseButton.style.display = 'block';
-      legendOpenButton.onclick = function() {
-        legend.style.display = 'block';
-        legendOpenButton.style.display = 'none';
-      }
-      legendCloseButton.onclick = function() {
-        legend.style.display = 'none';
-        legendOpenButton.style.display = 'block';
-      }
-    }
-  }
-
-  google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-
+      <style type="text/css">
+  		#foto {position: absolute; width: 100%; height: 100%; overflow: hidden; top: 0; left: 0; z-index: 1;}
+  		#contenedor {position: absolute; top:100%; left:0; width: 100%;
+  		}
+  		#texto1{ width: 100%; max-width: 700px; margin: 0 auto;}
+      #texto1 h1 {font-size: 3em; font-family:'Walter Turncoat', sans-serif; line-height: 100%; color: #8800FF;}
+      #texto1 h2 {font-family:'Walter Turncoat', sans-serif; line-height: 100%; color: #0000FF;}
+      #texto1 p {font-size: 1.2em;}
+  		#texto1 img {float: left; margin-right: 30px; margin-bottom: 10px;}
+  		#titulo {font-size: 3vw; position: absolute; top: 60%; left: 55%; color: #FFF; z-index: 2; font-family:'Walter Turncoat', sans-serif; line-height: 180%;}
+  	  </style>
+<link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
 </head>
 
-<body>
-  <h1>En el mapa:</h1>
-  <h2>Personas LGBT asesinadas durante el año 2015</h2>
-  <p>Georeferencia hecha a partir del reporte generado por Colombia Diversa, Santamaria Fund. y Caribe Afirmativo</p>
-  <h3>Mapa a través de Fusion Tables</h3>
-  <div id="googft-mapCanvas"></div>
-  <h3>Mapa a partir de Spreadsheets y Maps de Google (versión 2017)</h3>
-  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=15w_po-VWoYr_N5iFDgqwKMkTGl4" width="640" height="480"></iframe>
-</body>
+  <body>
 
+  <div id="titulo">
+  	<h1>Están asesinando al 'arco iris'</h1>
+  </div>
+
+  <div id="foto">
+  	<img src="http://farm9.staticflickr.com/8097/8535067907_fa6603625a_o.jpg" width="100%">
+  </div>
+
+  <div id="contenedor">
+  	<div id="texto1">
+  	  <img src="http://shop.hrc.org/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/h/r/hrcrainbowteegr_3.jpg" width="300" />
+      <h1>¡Los prejuicios nos están matando!</h2>
+      <p>Las personas LGBT en Colombia, además de ser discriminadas por divesos factores, se enfrentan también a una problemática mayor: están siendo asesinadas en diferentes partes del país como consecuencia de factores como <em>"prejuicios
+  sociales ampliamente extendidos y ante los cuales el Estado tiene obligaciones particulares en materia de prevención, investigación, sanción y garantía de no repetición".</em></p>
+      <h2>Pero... ¿Dónde se comenten los crímenes contra las personas LGBT?</h2>
+      <p>En el siguiente mapa se abordan los crímenes cometidos contra las personas con orientación sexual diversa, diferente a la homosexual, en los diferentes departamentos del país, para dar una pequeña muestra sobre lo que esta pasando en las diferntes ciudades y quienes son las personas que -simplemente por ser diferntes- están siendo víctimas de la violencia que, pareciera, no está dejando vivir en Paz a esta nación que tanto la necesita.</p>
+<iframe width="700" height="600" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col3%3E%3E0+from+1dsALmC3MPboNcpfgjiIEz_4BNdIFRgQZH2oA-C9w&amp;viz=MAP&amp;h=false&amp;lat=5.541499250428972&amp;lng=-74.46500756093747&amp;t=1&amp;z=6&amp;l=col3%3E%3E0&amp;y=2&amp;tmplt=2&amp;hml=GEOCODABLE"></iframe>
+      <div style="margin-top:20px; margin-bottom:30px;"><span style="font-size:0.75em; font-style:italic;">Ejercicio de georeferenciación de Roberto Alejandro Morales para la Maestría de Humanidades Digiales, creado a partir del infome de violencia hacia personas LGBT del año 2015 de Colombia Diversa, Santamaria Fundación y Caribe Afirmativo</span></div>
+  	 </div>
+  </div>
+
+  </body>
   </html>
